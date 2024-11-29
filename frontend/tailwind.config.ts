@@ -8,9 +8,24 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      animation: {
+        'border-loop': 'border-loop 3s linear infinite', // Alterado para um tempo mais curto e contínuo
+      },
+      keyframes: {
+        'border-loop': {
+          '0%': {
+            borderColor: 'red', 
+            transform: 'scale(1)',
+          },
+          '50%': {
+            borderColor: 'white', 
+            transform: 'scale(1)', 
+          },
+          '100%': {
+            borderColor: 'red',
+            transform: 'scale(1)', 
+          },
+        },
       },
     },
   },
